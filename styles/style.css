@@ -1,3 +1,15 @@
-p{
-    color: purple;
+body {
+  background-image: url(https://assets-global.website-files.com/638ddb27377c68c6452b5735/640bbdaee5569e4f2d631645_farhad-ibrahimzade-KpOl9jV2aJM-unsplash.jpg);
+}
+
+/* list itemu tarpai/stilius */
+.nav-item {
+  margin-left: 2rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 2em;
+  font-style: italic;
+  font-weight: 700;
+  color: palevioletred;
 }
