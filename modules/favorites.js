@@ -49,3 +49,5 @@ export function addFavorites(className) {
         })
     })
 }
+
+// truksta position relative ant korteliu konteinerio
