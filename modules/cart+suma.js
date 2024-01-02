@@ -1,0 +1,10 @@
+const kainaNavSelect = document.querySelector(".navbar-nav");
+const kainaNav = document.createElement("p");
+kainaNavSelect.append(kainaNav);
+kainaNav.innerText= "Krepšelio suma";
+kainaNav.style.color = "black";
+kainaNav.style.fontSize = "2.5em";
+kainaNav.style.marginLeft = "20px";
+kainaNav.style.fontWeight = "500";
+kainaNav.style.fontFamily = "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif";
+kainaNav.style.fontStyle = "italic";
