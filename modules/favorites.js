@@ -1,7 +1,6 @@
 // funkcija sukurti favorites 
 
 export function addFavorites(className) {
-
     let cards = Array.from(document.getElementsByClassName(className))
     let dishNumber = 1
     cards.forEach(card => {
