@@ -1,46 +1,57 @@
-// funkcija sukurti kortele
+import { data } from "../data.js";
 
-function generateCard(id, className) {
-  const card = document.getElementById(id);
-  card.innerHTML = `
-    <div class="card mb-3 text-white ${className}" style="background-color: rgba(0, 0, 0, 0.7);">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Patiekalas</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus accusamus error quidem animi et! Accusantium accusamus reiciendis hic earum quisquam!</p>
-            <p class="card-text"><small class="text-white">Kaina</small></p>
+function displayCards(category = "") {
+  const containerId = "korteles";
+  const cardContainer = document.getElementById("cardContainer");
+
+  if (!cardContainer) {
+    console.error("Container with such ID not found!");
+    return;
+  }
+
+  // Clear previous content
+  cardContainer.innerHTML = "";
+
+  data.forEach((item) => {
+    // Check if the category matches or if no category is specified
+    if (category === "" || item.category === category) {
+      const foodCard = `
+        <div class="col-md-6">
+          <div class="card mb-3 text-white ${item.category}" style="background-color: rgba(0, 0, 0, 0.7);">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="${item.img}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">${item.title}</h5>
+                  <p class="card-text">${item.desc}</p>
+                  <p class="card-text"><small class="text-white">Kaina: ${item.price}</small></p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    `;
+      `;
+      cardContainer.innerHTML += foodCard;
+    }
+  });
 }
 
-generateCard("card1", "breakfast");
-generateCard("card2", "breakfast");
-generateCard("card3", "breakfast");
-generateCard("card4", "breakfast");
+// rodyti visas kortas
+displayCards();
 
-generateCard("card5", "lunch");
-generateCard("card6", "lunch");
-generateCard("card7", "lunch");
-generateCard("card8", "lunch");
+// funkcija isfiltruoti kortas pagal kategorija
+function filterByCategory(category) {
+  displayCards(category);
+}
 
-generateCard("card9", "dinner");
-generateCard("card10", "dinner");
-generateCard("card11", "dinner");
-generateCard("card12", "dinner");
+// funkcijos panaudojimas
 
-generateCard("card13", "drinks");
-generateCard("card14", "drinks");
-generateCard("card15", "drinks");
-generateCard("card16", "drinks");
+// filterByCategory("breakfast");
+// filterByCategory("lunch");
+// filterByCategory("dinner");
+// filterByCategory("drinks");
+// filterByCategory("deserts");
 
-generateCard("card17", "deserts");
-generateCard("card18", "deserts");
-generateCard("card19", "deserts");
-generateCard("card20", "deserts");
+export { displayCards, filterByCategory };
