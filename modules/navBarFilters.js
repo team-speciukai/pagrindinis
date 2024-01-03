@@ -1,18 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const navLinks = document.querySelectorAll(".nav-link");
-  const foodCards = document.querySelectorAll(".card");
+import { filterByCategory } from "./cards.js";
 
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function () {
-      const category = this.textContent.toLowerCase();
+document.getElementById("allItems").addEventListener("click", function () {
+  filterByCategory("");
+});
 
-      foodCards.forEach((card) => {
-        if (category === "all" || card.classList.contains(category)) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
-      });
-    });
+document
+  .getElementById("breakfastItems")
+  .addEventListener("click", function () {
+    filterByCategory("breakfast"); // imti ne "breakfastItems", o "breakfast", nes cia pasuojama is data.js
   });
+
+document.getElementById("lunchItems").addEventListener("click", function () {
+  filterByCategory("lunch");
+});
+document.getElementById("dinnerItems").addEventListener("click", function () {
+  filterByCategory("dinner");
+});
+document.getElementById("drinksItems").addEventListener("click", function () {
+  filterByCategory("drinks");
+});
+document.getElementById("desertsItems").addEventListener("click", function () {
+  filterByCategory("deserts");
 });
