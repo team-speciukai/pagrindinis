@@ -21,8 +21,8 @@ export function addFavorites(className) {
     const allHearts = document.querySelectorAll("i")
 
     allHearts.forEach((heart) => {
-        const imageId = heart.getAttribute("id")
-        if (favorites.includes(imageId)) {
+        const heartId = heart.getAttribute("id")
+        if (favorites.includes(heartId)) {
             heart.style.color = "red"
             heart.style.opacity = "90%"
         } else {
@@ -31,14 +31,14 @@ export function addFavorites(className) {
         }
         heart.addEventListener("click", (event) => {
             event.preventDefault()
-            if (favorites.includes(imageId)) {
+            if (favorites.includes(heartId)) {
                 heart.style.color = "white"
                 heart.style.opacity = "30%"
-                favorites = favorites.filter(id => id !== imageId);
+                favorites = favorites.filter(id => id !== heartId);
             } else {
                 heart.style.color = "red"
                 heart.style.opacity = "90%"
-                favorites.push(imageId);
+                favorites.push(heartId);
             }
             if (favorites.length === 0) {
                 localStorage.removeItem("favorites")
