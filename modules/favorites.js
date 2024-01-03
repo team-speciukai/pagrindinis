@@ -1,12 +1,13 @@
 // funkcija sukurti favorites 
 
+
 export function addFavorites(className) {
-    let cards = Array.from(document.getElementsByClassName(className))
+    let cards = Array.from(document.getElementsByClassName(className))  
     let dishNumber = 1
     cards.forEach(card => {
         const heart = document.createElement("i")
         heart.setAttribute("class", "fa fa-heart")
-        heart.setAttribute("id", `dish${dishNumber}`)
+        heart.setAttribute("id", `${card.id}`)
         heart.style.position = "absolute"
         heart.style.top = "3%"
         heart.style.right = "3%"
