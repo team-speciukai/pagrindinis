@@ -17,11 +17,10 @@ export function addFavorites(className) {
     })
 
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-
-    const redHeart = document.querySelectorAll("i") 
     const sortByNumber = (a, b) => (Number(a.match(/(\d+)/g)[0]) - Number(b.match(/(\d+)/g)[0]))  
+    const allHearts = document.querySelectorAll("i")
 
-    redHeart.forEach((heart) => {
+    allHearts.forEach((heart) => {
         const imageId = heart.getAttribute("id")
         if (favorites.includes(imageId)) {
             heart.style.color = "red"
@@ -49,5 +48,3 @@ export function addFavorites(className) {
         })
     })
 }
-
-// truksta position relative ant korteliu konteinerio
