@@ -4,7 +4,7 @@ export const data = [
     title: "patiekalas#1",
     category: "breakfast",
     price: 15.99,
-    img: "./images/example.webp",
+    img: "../images/breakfast-1.jpg",
     desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
   },
   {
@@ -12,7 +12,7 @@ export const data = [
     title: "patiekalas#2",
     category: "lunch",
     price: 13.99,
-    img: "./images/...",
+    img: "../images/lunch-1.jpg",
     desc: `vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats `,
   },
   {
@@ -20,7 +20,7 @@ export const data = [
     title: "patiekalas#3",
     category: "dinner",
     price: 6.99,
-    img: "./images/...",
+    img: "../images/dinner-1.jpg",
     desc: `ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.`,
   },
   {
@@ -28,7 +28,7 @@ export const data = [
     title: "patiekalas#4",
     category: "drinks",
     price: 20.99,
-    img: "./images/...",
+    img: "../images/drink-1.jpg",
     desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, `,
   },
   {
@@ -36,7 +36,7 @@ export const data = [
     title: "patiekalas#5",
     category: "deserts",
     price: 22.99,
-    img: "./images/...",
+    img: "../images/dessert-3.jpg",
     desc: `franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up `,
   },
   {
@@ -44,7 +44,7 @@ export const data = [
     title: "patiekalas#6",
     category: "breakfast",
     price: 18.99,
-    img: "./images/...",
+    img: "../images/breakfast-2.jpg",
     desc: `Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday`,
   },
   {
@@ -52,7 +52,7 @@ export const data = [
     title: "patiekalas#7",
     category: "lunch",
     price: 8.99,
-    img: "./images/...",
+    img: "../images/lunch-2.jpg",
     desc: `carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird `,
   },
   {
@@ -60,7 +60,7 @@ export const data = [
     title: "patiekalas#8",
     category: "dinner",
     price: 12.99,
-    img: "./images/...",
+    img: "../images/dinner-2.jpeg",
     desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
   },
   {
@@ -68,7 +68,7 @@ export const data = [
     title: "patiekalas#9",
     category: "drinks",
     price: 16.99,
-    img: "./images/...",
+    img: "../images/drink-2.jpg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
   {
@@ -76,7 +76,7 @@ export const data = [
     title: "patiekalas#10",
     category: "deserts",
     price: 22.99,
-    img: "./images/...",
+    img: "../images/dessert-2.jpg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
   {
@@ -84,7 +84,7 @@ export const data = [
     title: "patiekalas#11",
     category: "breakfast",
     price: 22.99,
-    img: "./images/...",
+    img: "../images/breakfast-3.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
   {
@@ -92,7 +92,7 @@ export const data = [
     title: "patiekalas#12",
     category: "lunch",
     price: 22.99,
-    img: "./images/...",
+    img: "../images/lunch-3.jpg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
   {
@@ -100,7 +100,7 @@ export const data = [
     title: "patiekalas#13",
     category: "dinner",
     price: 22.99,
-    img: "./images/...",
+    img: "../images/dinner-3.jpg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
   {
@@ -108,7 +108,7 @@ export const data = [
     title: "patiekalas#14",
     category: "deserts",
     price: 22.99,
-    img: "./images/...",
+    img: "../images/dessert-1.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
 ];
