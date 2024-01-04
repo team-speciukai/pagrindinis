@@ -24,9 +24,9 @@ function createFoodCard(item, count) {
               <p class="card-text"><small class="text-white">Kaina: ${item.price}</small></p>
             </div>
             <div class="card-footer">
-              <button class="decrement-btn" data-item-id="${item.id}">-</button>
-              <span id="count${item.id}">${count}</span>
-              <button class="increment-btn" data-item-id="${item.id}">+</button>
+            <button class="decrement-btn rounded-btn" data-item-id="${item.id}">-</button>
+        <span id="count${item.id}">${count}</span>
+        <button class="increment-btn rounded-btn" data-item-id="${item.id}">+</button>
             </div>
           </div>
         </div>
