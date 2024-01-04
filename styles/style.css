@@ -39,3 +39,7 @@ p::first-letter {
 .text-white {
   color: goldenrod;
 }
+
+.card {
+  position: relative;
+}

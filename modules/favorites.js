@@ -1,7 +1,6 @@
 // // funkcija sukurti favorites 
 
 export function addFavorites(className) {
-
     let cards = Array.from(document.getElementsByClassName(className))  
     cards.forEach(card => {
         const heart = document.createElement("i")
