@@ -29,7 +29,7 @@ function totalInCart() {
     itemIds.forEach(itemId => {
     totalItems += counts[itemId];
 });
-  
+localStorage.setItem("totalItems", totalItems);
 return totalItems;
 }
 const totalItems = totalInCart();
