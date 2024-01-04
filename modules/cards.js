@@ -1,4 +1,5 @@
 import { data } from "../data.js";
+import { addFavorites } from "./favorites.js"
 
 function displayCards(category = "") {
   const containerId = "korteles";
@@ -36,6 +37,7 @@ function displayCards(category = "") {
       cardContainer.innerHTML += foodCard;
     }
   });
+  addFavorites("card")
 }
 
 // rodyti visas kortas
