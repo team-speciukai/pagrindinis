@@ -8,6 +8,7 @@ import {
   decrementCount,
   getCountFromLocalStorage,
 } from "./counter.js";
+import { updateTotalInCart } from "./cart+suma.js";
 
 function createFoodCard(item, count) {
   return `
@@ -36,7 +37,6 @@ function createFoodCard(item, count) {
 }
 
 function displayCards(category = "") {
-  const containerId = "korteles";
   const cardContainer = document.getElementById("cardContainer");
 
   if (!cardContainer) {
@@ -61,6 +61,7 @@ function displayCards(category = "") {
     button.addEventListener("click", () => {
       const itemId = button.dataset.itemId;
       decrementCount(itemId);
+      updateTotalInCart();
     });
   });
 
@@ -68,6 +69,7 @@ function displayCards(category = "") {
     button.addEventListener("click", () => {
       const itemId = button.dataset.itemId;
       incrementCount(itemId);
+      updateTotalInCart();
     });
   });
 
