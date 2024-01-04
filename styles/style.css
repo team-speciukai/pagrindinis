@@ -64,3 +64,18 @@ p::first-letter {
 .rounded-btn:hover {
   background-color: #faea57ad;
 }
+
+/*----------------------- cart nav link style ---------------------------------------*/
+
+#cart {
+  color: palevioletred;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+  text-decoration: none;
+}
+
+/* .fa-cart-shopping {
+  color: green;
+} */

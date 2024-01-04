@@ -1,24 +1,24 @@
-const kainaNavSelect = document.querySelector(".navbar-nav");
-const kainaNav = document.createElement("a");
-kainaNavSelect.append(kainaNav);
+const kainaNav = document.getElementById("cart");
 
-kainaNav.setAttribute("href","cart.html")
-//style
-kainaNav.style.color = "black";
-kainaNav.style.fontSize = "2.5rem";
-kainaNav.style.marginLeft = "20px";
-kainaNav.style.fontWeight = "500";
-kainaNav.style.fontFamily = "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif";
-kainaNav.style.fontStyle = "italic";
-kainaNav.style.textDecoration = "none"
 //hover effect
-kainaNav.addEventListener('mouseover',() =>{
-    kainaNav.style.color = 'palevioletred';
+kainaNav.addEventListener("mouseover", () => {
+  kainaNav.style.color = "black";
 });
-kainaNav.addEventListener('mouseout',()=>{
-    kainaNav.style.color = 'black'
+kainaNav.addEventListener("mouseout", () => {
+  kainaNav.style.color = "palevioletred";
 });
 //
+
+
+export function updateTotalInCart() {
+  const counts = JSON.parse(localStorage.getItem("counts")) || {};
+  const itemIds = Object.keys(counts);
+  let totalItems = 0;
+  itemIds.forEach((itemId) => {
+    totalItems += counts[itemId];
+  });
+  localStorage.setItem("totalItems", totalItems);
+  kainaNav.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>Cart(${totalItems})`;
 
 function totalInCart() {
     const counts = JSON.parse(localStorage.getItem("counts")) || {};
@@ -34,7 +34,6 @@ kainaNav.innerHTML= `
 <i class="fa-solid fa-cart-shopping"></i>Cart(${totalItems})
 `;
 return totalItems;
+
 }
-const totalItems = totalInCart();
-console.log("isviso", totalItems);
-setInterval(totalInCart, 1000);
+updateTotalInCart(); // be sios eilutes, parefreshinus page nerodys cart counterio kol nepridesi/atimsi
