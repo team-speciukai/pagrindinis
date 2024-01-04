@@ -1,4 +1,5 @@
-import { getCountFromLocalStorage } from "./counter";
+import { data } from "../data.js";
+import { getCountFromLocalStorage } from "./counter.js";
 
 function createCartItem(item, count) {
   return `
@@ -13,7 +14,7 @@ export function displayCartItems() {
   const cartContainer = document.getElementById("cartContainer");
 
   if (!cartContainer) {
-    console.error("cart container was not found!");
+    console.log("cart container was not found!");
     return;
   }
 
