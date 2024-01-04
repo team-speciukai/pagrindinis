@@ -30,11 +30,10 @@ function totalInCart() {
     totalItems += counts[itemId];
 });
 localStorage.setItem("totalItems", totalItems);
-return totalItems;
-}
-const totalItems = totalInCart();
-console.log("isviso", totalItems);
-
 kainaNav.innerHTML= `
 <i class="fa-solid fa-cart-shopping"></i>Cart(${totalItems})
 `;
+}
+const totalItems = totalInCart();
+console.log("isviso", totalItems);
+setInterval(totalInCart, 1000);
