@@ -1,25 +1,24 @@
-// funkcija sukurti favorites 
+// // funkcija sukurti favorites 
 
 export function addFavorites(className) {
-    let cards = Array.from(document.getElementsByClassName(className))
-    let dishNumber = 1
+
+    let cards = Array.from(document.getElementsByClassName(className))  
     cards.forEach(card => {
         const heart = document.createElement("i")
         heart.setAttribute("class", "fa fa-heart")
-        heart.setAttribute("id", `dish${dishNumber}`)
+        heart.setAttribute("id", `${card.id}`)
         heart.style.position = "absolute"
         heart.style.top = "3%"
         heart.style.right = "3%"
         heart.style.fontSize = "40px"
-
+  
         card.append(heart)
-        dishNumber ++
     })
-
+  
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     const sortByNumber = (a, b) => (Number(a.match(/(\d+)/g)[0]) - Number(b.match(/(\d+)/g)[0]))  
     const allHearts = document.querySelectorAll("i")
-
+  
     allHearts.forEach((heart) => {
         const heartId = heart.getAttribute("id")
         if (favorites.includes(heartId)) {
@@ -47,4 +46,4 @@ export function addFavorites(className) {
             }
         })
     })
-}
+  }
