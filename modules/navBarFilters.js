@@ -1,6 +1,6 @@
 import { filterByCategory } from "./cards.js";
 
-document.getElementById("allItems").addEventListener("click", function () {
+document.getElementById("allItems").addEventListener("click", function (event) {
   filterByCategory("");
 });
 
