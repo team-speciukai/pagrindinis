@@ -1,3 +1,5 @@
+/** @format */
+
 body {
   background-image: url(https://assets-global.website-files.com/638ddb27377c68c6452b5735/640bbdaee5569e4f2d631645_farhad-ibrahimzade-KpOl9jV2aJM-unsplash.jpg);
 }
@@ -42,4 +44,7 @@ p::first-letter {
 
 .card {
   position: relative;
+}
+.card-footer {
+  border-top: none !important;
 }
