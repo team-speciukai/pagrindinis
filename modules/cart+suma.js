@@ -22,9 +22,9 @@ kainaNav.addEventListener('mouseout',()=>{
 
 function totalInCart() {
     const counts = JSON.parse(localStorage.getItem("counts")) || {};
-    console.log(counts);
+    // console.log(counts);
     const itemIds = Object.keys(counts);
-    console.log(itemIds);
+    // console.log(itemIds);
     let totalItems = 0;
     itemIds.forEach(itemId => {
     totalItems += counts[itemId];
@@ -33,6 +33,7 @@ localStorage.setItem("totalItems", totalItems);
 kainaNav.innerHTML= `
 <i class="fa-solid fa-cart-shopping"></i>Cart(${totalItems})
 `;
+return totalItems;
 }
 const totalItems = totalInCart();
 console.log("isviso", totalItems);
