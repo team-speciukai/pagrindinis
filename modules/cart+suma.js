@@ -34,6 +34,6 @@ kainaNav.innerHTML= `
 <i class="fa-solid fa-cart-shopping"></i>Cart(${totalItems})
 `;
 return totalItems;
-
+}
 }
 updateTotalInCart(); // be sios eilutes, parefreshinus page nerodys cart counterio kol nepridesi/atimsi
