@@ -20,7 +20,7 @@ export function updateTotalInCart() {
   localStorage.setItem("totalItems", totalItems);
   kainaNav.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>Cart(${totalItems})`;
 
-function totalInCart() {
+  function totalInCart() {
     const counts = JSON.parse(localStorage.getItem("counts")) || {};
     // console.log(counts);
     const itemIds = Object.keys(counts);
@@ -36,4 +36,5 @@ kainaNav.innerHTML= `
 return totalItems;
 }
 }
+
 updateTotalInCart(); // be sios eilutes, parefreshinus page nerodys cart counterio kol nepridesi/atimsi
