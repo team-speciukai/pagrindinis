@@ -100,15 +100,24 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Užsakymo pristatymas</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            ...
+            <img src="https://www.entrepreneurshipinabox.com/wp-content/uploads/online-food-ordering-system.jpg" class="img-thumbnail" alt="order">
+          </div>
+          <div class="modal-body">
+            <label for="form-select">Pristatymo būdas</label>
+            <select id="form-select" class="form-select" aria-label="Default select example">
+              <option selected>Pasirinkite pristatymo būdą</option>
+              <option value="1">Pristatymas į namus</option>
+              <option value="2">Atsiėmimas vietoje</option>
+            </select>
+            <label for="exampleFormControlInput1" class="form-label">Pristatymo adresas/ Restorano adresas</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Laivės al. 1, Kaunas">
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
+            <button type="button" class="btn btn-primary">Užsakyti</button>
           </div>
         </div>
       </div>
