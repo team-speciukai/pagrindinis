@@ -1,6 +1,3 @@
-/** @format */
-
-// cards.js
 import { data } from "../data.js";
 import { addFavorites } from "./favorites.js";
 import {

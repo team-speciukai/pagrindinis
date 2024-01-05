@@ -1,6 +1,3 @@
-/** @format */
-
-// counter.js
 export function incrementCount(itemId) {
   const countElement = document.getElementById(`count${itemId}`);
   let count = parseInt(countElement.textContent, 10);
