@@ -11,8 +11,14 @@ openModal.addEventListener('click', ()=>{
     if(totalItems.length > 0){
         modal.style.display = "block"
     } else if (totalItems.length === 0){
-        alert('pasirink bent 1 patiekala')
+        alert('Pasirinkite bent vieną patiekalą')
     }
 });
 
+const orderButton = document.getElementById("orderButton");
 
+orderButton.addEventListener('click', ()=>{
+    localStorage.removeItem('totalItems');
+    localStorage.removeItem('counts');
+    modal.style.display = "none";
+});
