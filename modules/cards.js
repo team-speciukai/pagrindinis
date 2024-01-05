@@ -13,7 +13,7 @@ import { updateTotalInCart } from "./cart+suma.js";
 function createFoodCard(item, count) {
   return `
     <div class="col-md-6">
-      <div id="${item.title}" class="card mb-3 text-white ${item.category}" style="background-color: rgba(0, 0, 0, 0.7);">
+      <div id="${item.id} ${item.title}" class="card mb-3 text-white ${item.category}" style="background-color: rgba(0, 0, 0, 0.7);">
         <div class="row g-0">
           <div class="col-md-4">
             <img src="${item.img}" class="img-fluid rounded-start" alt="...">

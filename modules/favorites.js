@@ -36,7 +36,7 @@ export function addFavorites(className) {
             } else {
                 heart.style.color = "red"
                 heart.style.opacity = "90%"
-                favorites.push(heartId);
+                favorites.push(`${heartId}`);
             }
             if (favorites.length === 0) {
                 localStorage.removeItem("favorites")
