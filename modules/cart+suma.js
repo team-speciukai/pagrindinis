@@ -35,5 +35,5 @@ kainaNav.innerHTML= `
 `;
 return totalItems;
 
-}
+}}
 updateTotalInCart(); // be sios eilutes, parefreshinus page nerodys cart counterio kol nepridesi/atimsi

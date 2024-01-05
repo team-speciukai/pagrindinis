@@ -22,7 +22,7 @@ function createFoodCard(item, count) {
             <div class="card-body">
               <h5 class="card-title">${item.title}</h5>
               <p class="card-text">${item.desc}</p>
-              <p class="card-text"><small class="text-white">Kaina: ${item.price}</small></p>
+              <p class="card-text"><small class="text-white">Kaina: ${item.price} €</small></p>
             </div>
             <div class="card-footer">
             <button class="decrement-btn rounded-btn" data-item-id="${item.id}">-</button>
