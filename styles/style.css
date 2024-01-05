@@ -79,3 +79,24 @@ p::first-letter {
 /* .fa-cart-shopping {
   color: green;
 } */
+
+.modal-header {
+  background-color: palevioletred;
+  color: white;
+}
+.modal-body img {
+  border: 2px solid white;
+}
+#modal-body{
+  background-color: palevioletred;
+}
+#orderButton {
+  color: palevioletred;
+  background-color:white;
+}
+label{
+  color:black;
+}
+#orderButton:hover{
+  color:black;
+}

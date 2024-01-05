@@ -16,9 +16,9 @@ openModal.addEventListener('click', ()=>{
 });
 
 const orderButton = document.getElementById("orderButton");
-
 orderButton.addEventListener('click', ()=>{
     localStorage.removeItem('totalItems');
     localStorage.removeItem('counts');
     modal.style.display = "none";
 });
+
