@@ -1,6 +1,6 @@
-// // funkcija sukurti favorites
+// functions -------------------------< START
 
-export function addFavorites(className) {
+function addFavorites(className) {
   let cards = Array.from(document.getElementsByClassName(className));
   cards.forEach((card) => {
     const heart = document.createElement("i");
@@ -50,3 +50,11 @@ export function addFavorites(className) {
     });
   });
 }
+
+// functions -------------------------> END
+
+// exports ---------------------------< START
+
+export { addFavorites };
+
+// exports ---------------------------< END
