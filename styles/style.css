@@ -4,7 +4,7 @@ body {
   background-image: url(https://assets-global.website-files.com/638ddb27377c68c6452b5735/640bbdaee5569e4f2d631645_farhad-ibrahimzade-KpOl9jV2aJM-unsplash.jpg);
 }
 
-/* list itemu tarpai/stilius */
+/* list items */
 
 .nav-item {
   margin-left: 2rem;
@@ -17,7 +17,7 @@ body {
   color: palevioletred;
 }
 
-/*----------------------- Cards style ---------------------------------------*/
+/*----------------------- Cards ---------------------------------------*/
 
 .img-fluid {
   aspect-ratio: 1/1;
@@ -65,7 +65,7 @@ p::first-letter {
   background-color: #faea57ad;
 }
 
-/*----------------------- cart nav link style ---------------------------------------*/
+/*----------------------- cart nav link ---------------------------------------*/
 
 #cart {
   color: palevioletred;
@@ -75,6 +75,8 @@ p::first-letter {
   font-style: italic;
   text-decoration: none;
 }
+
+/*----------------------- modal ---------------------------------------*/
 
 .modal-header {
   background-color: palevioletred;

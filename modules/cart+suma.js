@@ -9,7 +9,6 @@ kainaNav.addEventListener("mouseout", () => {
 });
 //
 
-
 export function updateTotalInCart() {
   const counts = JSON.parse(localStorage.getItem("counts")) || {};
   const itemIds = Object.keys(counts);
@@ -26,15 +25,15 @@ export function updateTotalInCart() {
     const itemIds = Object.keys(counts);
     // console.log(itemIds);
     let totalItems = 0;
-    itemIds.forEach(itemId => {
-    totalItems += counts[itemId];
-});
-localStorage.setItem("totalItems", totalItems);
-kainaNav.innerHTML= `
+    itemIds.forEach((itemId) => {
+      totalItems += counts[itemId];
+    });
+    localStorage.setItem("totalItems", totalItems);
+    kainaNav.innerHTML = `
 <i class="fa-solid fa-cart-shopping"></i>Cart(${totalItems})
 `;
-return totalItems;
-}
+    return totalItems;
+  }
 }
 
 updateTotalInCart(); // be sios eilutes, parefreshinus page nerodys cart counterio kol nepridesi/atimsi
