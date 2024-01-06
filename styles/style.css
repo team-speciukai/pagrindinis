@@ -76,10 +76,6 @@ p::first-letter {
   text-decoration: none;
 }
 
-/* .fa-cart-shopping {
-  color: green;
-} */
-
 .modal-header {
   background-color: palevioletred;
   color: white;
@@ -87,16 +83,16 @@ p::first-letter {
 .modal-body img {
   border: 2px solid white;
 }
-#modal-body{
+#modal-body {
   background-color: palevioletred;
 }
 #orderButton {
   color: palevioletred;
-  background-color:white;
+  background-color: white;
 }
-label{
-  color:black;
+label {
+  color: black;
 }
-#orderButton:hover{
-  color:black;
+#orderButton:hover {
+  color: black;
 }
