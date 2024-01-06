@@ -1,7 +1,12 @@
-import { updateTotalInCart } from "./cart+suma.js"; // po order submito kad atnaujintu carta
+// imports ---------------------------< START
+
+import { updateTotalInCart } from "./cart.js"; // naujinti cart skaitliuka
+
+// imports ---------------------------> END
 
 const modal = new bootstrap.Modal(document.getElementById("staticBackdrop"));
 const openModal = document.querySelector("#cart");
+const orderButton = document.getElementById("orderButton");
 
 openModal.addEventListener("click", (event) => {
   const storedData = localStorage.getItem("totalItems");
@@ -14,7 +19,6 @@ openModal.addEventListener("click", (event) => {
   }
 });
 
-const orderButton = document.getElementById("orderButton");
 orderButton.addEventListener("click", (event) => {
   localStorage.removeItem("totalItems");
   localStorage.removeItem("counts");

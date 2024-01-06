@@ -1,28 +1,31 @@
-/** @format */
+// imports ---------------------------< START
 
-// cards.js
-import { data } from "../data.js";
+import { data } from "../data/data.js";
 import { addFavorites } from "./favorites.js";
 import {
   incrementCount,
   decrementCount,
   getCountFromLocalStorage,
 } from "./counter.js";
-import { updateTotalInCart } from "./cart+suma.js";
+import { updateTotalInCart } from "./cart.js";
+
+// imports ---------------------------> END
+
+// functions -------------------------< START
 
 function createFoodCard(item, count) {
   return `
     <div class="col-md-6">
       <div id="${item.title}" class="card mb-3 text-white ${item.category}" style="background-color: rgba(0, 0, 0, 0.7);">
         <div class="row g-0">
-          <div class="col-md-4">
+          <div class="col">
             <img src="${item.img}" class="img-fluid rounded-start" alt="...">
           </div>
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">${item.title}</h5>
               <p class="card-text">${item.desc}</p>
-              <p class="card-text"><small class="text-white">Kaina: ${item.price} €</small></p>
+              <p class="card-text"><h1 class="price-text">${item.price} €</h1></p>
             </div>
             <div class="card-footer">
             <button class="decrement-btn rounded-btn" data-item-id="${item.id}">-</button>
@@ -44,11 +47,10 @@ function displayCards(category = "") {
     return;
   }
 
-  // Clear previous content
-  cardContainer.innerHTML = "";
+  cardContainer.innerHTML = ""; // isvalyti
 
   data.forEach((item) => {
-    // Check if the category matches or if no category is specified
+    // kategorijos tikrinimas
     if (category === "" || item.category === category) {
       const count = getCountFromLocalStorage(item.id);
       const foodCard = createFoodCard(item, count);
@@ -56,7 +58,6 @@ function displayCards(category = "") {
     }
   });
 
-  // Attach event listeners after adding cards to the DOM
   document.querySelectorAll(".decrement-btn").forEach((button) => {
     button.addEventListener("click", () => {
       const itemId = button.dataset.itemId;
@@ -75,13 +76,16 @@ function displayCards(category = "") {
 
   addFavorites("card");
 }
+displayCards(); // kortu rodymas
 
-// rodyti visas kortas
-displayCards();
-
-// funkcija isfiltruoti kortas pagal kategorija
 function filterByCategory(category) {
   displayCards(category);
 }
 
+// functions -------------------------> END
+
+// exports ---------------------------< START
+
 export { displayCards, filterByCategory };
+
+// exports ---------------------------> END

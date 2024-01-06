@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
+
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,8 +20,10 @@
       src="https://kit.fontawesome.com/0c83822d3d.js"
       crossorigin="anonymous"
     ></script>
+
     <title>Restorano Menu</title>
   </head>
+
   <body>
     <section id="headeris" class="header text-center py-4" style="color: black">
       <div class="container">
@@ -94,76 +97,77 @@
         </div>
       </nav>
     </section>
+
     <section id="korteles" class="cards">
       <div class="container-fluid">
         <div class="row" id="cardContainer"></div>
       </div>
     </section>
-    <!-- modal tik testas pazet ar veikia, nebaigtas-->
-    <div
-      class="modal fade"
-      id="staticBackdrop"
-      data-bs-backdrop="static"
-      data-bs-keyboard="true"
-      tabindex="-1"
-      aria-labelledby="staticBackdropLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">
-              Užsakymo pristatymas
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <img
-              src="https://promova.com/content/ordering_at_a_restaurant_7b0ba275f7.png"
-              class="img-thumbnail rounded"
-              alt="order"
-            />
-          </div>
-          <div class="modal-body" id="modal-body">
-            <label for="form-select">Pristatymo būdas</label>
-            <select
-              id="form-select"
-              class="form-select bg"
-              aria-label="Default select example"
-              required
-            >
-              <option selected>Pasirinkite pristatymo būdą</option>
-              <option value="1">Pristatymas į namus</option>
-              <option value="2">Atsiėmimas vietoje</option>
-            </select>
-            <label for="exampleFormControlInput1" class="form-label"
-              >Pristatymo adresas/ Restorano adresas</label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="exampleFormControlInput1"
-              placeholder="Laivės al. 1, Kaunas"
-              required
-            />
-          </div>
 
-          <button type="button" class="btn btn-lg" id="orderButton">
-            Užsakyti
-          </button>
+    <section id="modalas">
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="true"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Užsakymo pristatymas
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <img
+                src="https://promova.com/content/ordering_at_a_restaurant_7b0ba275f7.png"
+                class="img-thumbnail rounded"
+                alt="order"
+              />
+            </div>
+            <div class="modal-body" id="modal-body">
+              <label for="form-select">Pristatymo būdas</label>
+              <select
+                id="form-select"
+                class="form-select bg"
+                aria-label="Default select example"
+                required
+              >
+                <option selected>Pasirinkite pristatymo būdą</option>
+                <option value="1">Pristatymas į namus</option>
+                <option value="2">Atsiėmimas vietoje</option>
+              </select>
+              <label for="exampleFormControlInput1" class="form-label"
+                >Pristatymo adresas/ Restorano adresas</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Laivės al. 1, Kaunas"
+                required
+              />
+            </div>
+
+            <button type="button" class="btn btn-lg" id="orderButton">
+              Užsakyti
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <script src="./modules/cards.js" type="module"></script>
-    <script src="./modules/navBarFilters.js" type="module"></script>
-    <script src="./modules/cart+suma.js" type="module"></script>
+    </section>
+
     <script src="script.js" type="module"></script>
-    <script src="./modules/modal.js" type="module"></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

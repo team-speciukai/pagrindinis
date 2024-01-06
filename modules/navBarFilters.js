@@ -1,4 +1,8 @@
+// imports ---------------------------< START
+
 import { filterByCategory } from "./cards.js";
+
+// imports ---------------------------> END
 
 document.getElementById("allItems").addEventListener("click", function () {
   filterByCategory("");
