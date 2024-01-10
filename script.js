@@ -1,3 +1,5 @@
+/** @format */
+
 import * as cardModule from "./modules/cards.js";
 cardModule.displayCards();
 cardModule.filterByCategory();

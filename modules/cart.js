@@ -1,3 +1,5 @@
+/** @format */
+
 const kainaNav = document.getElementById("cart");
 
 // hover effect

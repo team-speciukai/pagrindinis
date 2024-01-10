@@ -1,3 +1,6 @@
+
+/** @format */
+
 // imports ---------------------------< START
 
 import { updateTotalInCart } from "./cart.js"; // naujinti cart skaitliuka

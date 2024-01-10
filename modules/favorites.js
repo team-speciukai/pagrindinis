@@ -1,3 +1,5 @@
+/** @format */
+
 // functions -------------------------< START
 
 function addFavorites(className) {
@@ -28,6 +30,23 @@ function addFavorites(className) {
       heart.style.color = "white";
       heart.style.opacity = "30%";
     }
+
+    // Add hover effect to match rounded-btn:hover color
+    heart.addEventListener("mouseover", () => {
+      heart.style.color = "#faea57ad"; // Set the same color as rounded-btn:hover
+      heart.style.opacity = "1"; // Adjust the opacity value for better visibility
+    });
+
+    heart.addEventListener("mouseout", () => {
+      if (favorites.includes(heartId)) {
+        heart.style.color = "red";
+        heart.style.opacity = "90%";
+      } else {
+        heart.style.color = "white";
+        heart.style.opacity = "30%";
+      }
+    });
+
     heart.addEventListener("click", (event) => {
       event.preventDefault();
       if (favorites.includes(heartId)) {
@@ -44,7 +63,7 @@ function addFavorites(className) {
       } else {
         localStorage.setItem(
           "favorites",
-          JSON.stringify(favorites.sort(sortByNumber)),
+          JSON.stringify(favorites.sort(sortByNumber))
         );
       }
     });

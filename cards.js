@@ -2,8 +2,6 @@
 
 // imports ---------------------------< START
 
-// cards.js
-
 import { data } from "../data/data.js";
 import { addFavorites } from "./favorites.js";
 import {
@@ -20,9 +18,7 @@ import { updateTotalInCart } from "./cart.js";
 function createFoodCard(item, count) {
   return `
     <div class="col-md-6">
-      <div id="${item.title}" class="card mb-3 text-white ${
-    item.category
-  }" style="background-color: rgba(0, 0, 0, 0.7);">
+      <div id="${item.title}" class="card mb-3 text-white ${item.category}" style="background-color: rgba(0, 0, 0, 0.7);">
         <div class="row g-0">
           <div class="col">
             <img src="${item.img}" class="img-fluid rounded-start" alt="...">
@@ -31,21 +27,12 @@ function createFoodCard(item, count) {
             <div class="card-body">
               <h5 class="card-title">${item.title}</h5>
               <p class="card-text">${item.desc}</p>
-              <p class="card-text"><h1 class="price-text">${
-                item.price
-              } €</h1></p>
+              <p class="card-text"><h1 class="price-text">${item.price} €</h1></p>
             </div>
             <div class="card-footer">
-              <button class="decrement-btn rounded-btn" data-item-id="${
-                item.id
-              }">-</button>
-              <span id="count${item.id}">${count}</span>
-              <button class="increment-btn rounded-btn" data-item-id="${
-                item.id
-              }">+</button>
-              <div style="color: yellow;">Total: <span id="totalPrice${
-                item.id
-              }">${(item.price * count).toFixed(2)} €</span></div>
+            <button class="decrement-btn rounded-btn" data-item-id="${item.id}">-</button>
+        <span id="count${item.id}">${count}</span>
+        <button class="increment-btn rounded-btn" data-item-id="${item.id}">+</button>
             </div>
           </div>
         </div>
@@ -62,7 +49,7 @@ function displayCards(category = "") {
     return;
   }
 
-  cardContainer.innerHTML = "";
+  cardContainer.innerHTML = ""; // isvalyti
 
   data.forEach((item) => {
     // kategorijos tikrinimas
@@ -78,7 +65,6 @@ function displayCards(category = "") {
       const itemId = button.dataset.itemId;
       decrementCount(itemId);
       updateTotalInCart();
-      updateTotalPrice(itemId);
     });
   });
 
@@ -87,24 +73,11 @@ function displayCards(category = "") {
       const itemId = button.dataset.itemId;
       incrementCount(itemId);
       updateTotalInCart();
-      updateTotalPrice(itemId);
     });
   });
 
   addFavorites("card");
 }
-
-function updateTotalPrice(itemId) {
-  const countElement = document.getElementById(`count${itemId}`);
-  const priceElement = document.getElementById(`totalPrice${itemId}`);
-
-  let count = parseInt(countElement.textContent, 10);
-  let price = parseFloat(data[itemId - 1].price);
-
-  const total = (count * price).toFixed(2);
-  priceElement.textContent = `${total} €`;
-}
-
 displayCards(); // kortu rodymas
 
 function filterByCategory(category) {

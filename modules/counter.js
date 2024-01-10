@@ -1,25 +1,35 @@
+/** @format */
+
 // functions -------------------------< START
 
 function incrementCount(itemId, itemTitle) {
   const countElement = document.getElementById(`count${itemId}`);
-  let count = parseInt(countElement.textContent, 10);
-  count += 1;
-  countElement.textContent = count;
-  updateLocalStorage(itemId, count, itemTitle);
+
+  // Check if the countElement exists before proceeding
+  if (countElement) {
+    let count = parseInt(countElement.textContent, 10);
+    count += 1;
+    countElement.textContent = count;
+    updateLocalStorage(itemId, count, itemTitle);
+  }
 }
 
 function decrementCount(itemId) {
   const countElement = document.getElementById(`count${itemId}`);
-  let count = parseInt(countElement.textContent, 10);
 
-  if (count > 0) {
-    count -= 1;
-    countElement.textContent = count;
+  // Check if the countElement exists before proceeding
+  if (countElement) {
+    let count = parseInt(countElement.textContent, 10);
 
-    if (count === 0) {
-      removeItemFromLocalStorage(itemId);
-    } else {
-      updateLocalStorage(itemId, count);
+    if (count > 0) {
+      count -= 1;
+      countElement.textContent = count;
+
+      if (count === 0) {
+        removeItemFromLocalStorage(itemId);
+      } else {
+        updateLocalStorage(itemId, count);
+      }
     }
   }
 }
