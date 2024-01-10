@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/0c83822d3d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Restorano Menu</title>
+  </head>
+
+  <body>
+    <section id="headeris" class="header text-center py-4" style="color: black">
+      <div class="container">
+        <h1
+          class="display-2"
+          style="
+            font-weight: 500;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+          "
+        >
+          Our Menu
+        </h1>
+      </div>
+    </section>
+
+    <section id="navbaras" class="navbar">
+      <nav class="navbar navbar-expand-lg bg-body-dark w-100">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button
+            class="navbar-toggler mx-auto py-2 mb-5"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto mb-5">
+              <li class="nav-item">
+                <a
+                  id="allItems"
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#"
+                  >All</a
+                >
+              </li>
+              <li class="nav-item">
+                <a id="breakfastItems" class="nav-link" href="#">Breakfast</a>
+              </li>
+              <li class="nav-item">
+                <a id="lunchItems" class="nav-link" href="#">Lunch</a>
+              </li>
+              <li class="nav-item">
+                <a id="dinnerItems" class="nav-link" href="#">Dinner</a>
+              </li>
+              <li class="nav-item">
+                <a id="drinksItems" class="nav-link" href="#">Drinks</a>
+              </li>
+              <li class="nav-item">
+                <a id="desertsItems" class="nav-link" href="#">Deserts</a>
+              </li>
+              <li class="nav-item">
+                <button
+                  type="button"
+                  class="nav-link btn"
+                  id="cart"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
+                >
+                  Cart
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section id="korteles" class="cards">
+      <div class="container-fluid">
+        <div class="row" id="cardContainer"></div>
+      </div>
+    </section>
+
+    <section id="modalas">
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="true"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Užsakymo pristatymas
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <img
+                src="https://promova.com/content/ordering_at_a_restaurant_7b0ba275f7.png"
+                class="img-thumbnail rounded"
+                alt="order"
+              />
+            </div>
+            <div class="modal-body" id="modal-body">
+              <label for="form-select">Pristatymo būdas</label>
+              <select
+                id="form-select"
+                class="form-select bg"
+                aria-label="Default select example"
+                required
+              >
+                <option selected>Pasirinkite pristatymo būdą</option>
+                <option value="1">Pristatymas į namus</option>
+                <option value="2">Atsiėmimas vietoje</option>
+              </select>
+              <label for="exampleFormControlInput1" class="form-label"
+                >Pristatymo adresas/ Restorano adresas</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Laivės al. 1, Kaunas"
+                required
+              />
+            </div>
+
+            <button type="button" class="btn btn-lg" id="orderButton">
+              Užsakyti
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js" type="module"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
