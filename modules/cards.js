@@ -1,4 +1,4 @@
-/** @format */
+// imports ---------------------------< START
 
 // cards.js
 
@@ -10,6 +10,10 @@ import {
   getCountFromLocalStorage,
 } from "./counter.js";
 import { updateTotalInCart } from "./cart.js";
+
+// imports ---------------------------> END
+
+// functions -------------------------< START
 
 function createFoodCard(item, count) {
   return `
@@ -28,6 +32,9 @@ function createFoodCard(item, count) {
               <p class="card-text"><h1 class="price-text">${
                 item.price
               } €</h1></p>
+
+              <p class="card-text"><h1 class="price-text">${item.price} €</h1></p>
+
             </div>
             <div class="card-footer">
               <button class="decrement-btn rounded-btn" data-item-id="${
@@ -59,6 +66,10 @@ function displayCards(category = "") {
   cardContainer.innerHTML = "";
 
   data.forEach((item) => {
+  cardContainer.innerHTML = ""; // isvalyti
+
+  data.forEach((item) => {
+    // kategorijos tikrinimas
     if (category === "" || item.category === category) {
       const count = getCountFromLocalStorage(item.id);
       const foodCard = createFoodCard(item, count);
@@ -86,6 +97,7 @@ function displayCards(category = "") {
 
   addFavorites("card");
 }
+displayCards(); // kortu rodymas
 
 function updateTotalPrice(itemId) {
   const countElement = document.getElementById(`count${itemId}`);
@@ -104,4 +116,10 @@ function filterByCategory(category) {
   displayCards(category);
 }
 
+// functions -------------------------> END
+
+// exports ---------------------------< START
+
 export { displayCards, filterByCategory };
+
+// exports ---------------------------> END

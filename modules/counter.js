@@ -1,4 +1,4 @@
-/** @format */
+// functions -------------------------< START
 
 // functions -------------------------< START
 
@@ -12,6 +12,12 @@ function incrementCount(itemId, itemTitle) {
     countElement.textContent = count;
     updateLocalStorage(itemId, count, itemTitle);
   }
+function incrementCount(itemId, itemTitle) {
+  const countElement = document.getElementById(`count${itemId}`);
+  let count = parseInt(countElement.textContent, 10);
+  count += 1;
+  countElement.textContent = count;
+  updateLocalStorage(itemId, count, itemTitle);
 }
 
 function decrementCount(itemId) {

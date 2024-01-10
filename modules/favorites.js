@@ -1,3 +1,4 @@
+
 /** @format */
 
 // functions -------------------------< START
@@ -64,6 +65,7 @@ function addFavorites(className) {
         localStorage.setItem(
           "favorites",
           JSON.stringify(favorites.sort(sortByNumber))
+          JSON.stringify(favorites.sort(sortByNumber)),
         );
       }
     });
