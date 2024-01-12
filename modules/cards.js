@@ -25,7 +25,10 @@ function createFoodCard(item, count) {
   }" style="background-color: rgba(0, 0, 0, 0.7);">
         <div class="row g-0">
           <div class="col">
-            <img src="${item.img}" class="img-fluid rounded-start" alt="...">
+            <img src="${
+              item.img
+            }" class="img-fluid rounded-start" style="width: 100%; height: 100%;" alt="...">
+
           </div>
           <div class="col-md-8">
             <div class="card-body">

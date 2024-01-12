@@ -1,4 +1,3 @@
-
 /**
  * ----------------------- Global ---------------------------------------
  *
@@ -27,11 +26,9 @@ body {
 /*----------------------- cards ---------------------------------------*/
 
 .img-fluid {
-  aspect-ratio: 1/1;
-  width: 100%;
-  height: 100%;
   border-radius: 5px;
   border: 2px solid palevioletred;
+  object-fit: cover;
 }
 
 h5 {
